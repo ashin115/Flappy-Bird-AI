@@ -9,6 +9,7 @@ WIN_WIDTH = 500
 WIN_HEIGHT = 800
 FPS = 30
 STAT_FONT = pygame.font.SysFont("04b_19", 50)
+win = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
 
 BIRDS_IMGS = [pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","bird" + str(x) + ".png"))) for x in range(1,4)]
 PIPE_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","pipe.png")).convert_alpha())
