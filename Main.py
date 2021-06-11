@@ -10,15 +10,10 @@ WIN_HEIGHT = 800
 FPS = 30
 STAT_FONT = pygame.font.SysFont("04b_19", 50)
 
-BIRDS_IMGS = [pygame.transform.scale2x(pygame.image.load(os.path.join(r'Flappy Bird\Assets\bird1.png'))), pygame.transform.scale2x(pygame.image.load(
-    os.path.join(r'Flappy Bird\Assets\bird2.png'))),
-    pygame.transform.scale2x(pygame.image.load(os.path.join(r'Flappy Bird\Assets\bird3.png')))]
-PIPE_IMG = pygame.transform.scale2x(pygame.image.load(
-    os.path.join(r'Flappy Bird\Assets\pipe.png')))
-BG_IMG = pygame.transform.scale2x(pygame.image.load(
-    os.path.join(r'Flappy Bird\Assets\bg.png')))
-BASE_IMG = pygame.transform.scale2x(pygame.image.load(
-    os.path.join(r'Flappy Bird\Assets\base.png')))
+BIRDS_IMGS = [pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","bird" + str(x) + ".png"))) for x in range(1,4)]
+PIPE_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","pipe.png")).convert_alpha())
+BG_IMG = pygame.transform.scale(pygame.image.load(os.path.join("imgs","bg.png")).convert_alpha(), (600, 900))
+BASE_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","base.png")).convert_alpha())
 ICON = BIRDS_IMGS[0]
 
 
